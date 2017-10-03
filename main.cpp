@@ -9,28 +9,29 @@ using namespace std;
 
 int main()
 {
-    //Asking the user for input on what picture they want in grayscale and make sure that the input is actually a
-    //picture. The program will keep asking the user for a picture as long as they do not input an image with the proper
-    //requirements.
+    /*Asking the user for input on what picture they want in grayscale
+        -Make sure that the input is actually a picture. 
+        -The program will keep asking the user for a picture as long as they do not input an image with the proper
+         requirements.
+        -Change the image into a bitmap as to allow for the altering of pixels.
+    */
 
 
 
 
-    //The program will repeat row by row, collumn by collumn to change the color gradiant of the pixel to a 
-    //greyscale version of the origanal color by taking the average of the three colors then changing the color to that
-    //grey. This will go on as long as the image has every pixel is replaced
+    /*The program will change the color of the image.
+        -Row by row, collumn by collumn it will change the color of the pixel to a grey color. 
+        -The grey will be the average of the rgb values then make it a grey color.
+        -This program will keep going tell the entire image is converted to a grey version.
+    */
+    
 
 
 
 
-
-
-    //The program will then save the new picture under a different name called oldtime.bmp
-
-
-
-
-
+    /*The program will then save the new picture under a different name called oldtime.bmp and notify the user of the 
+    name.
+    */
 
 
 
