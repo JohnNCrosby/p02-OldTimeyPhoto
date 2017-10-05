@@ -9,6 +9,18 @@ using namespace std;
 
 int main()
 {
+    Bitmap image;
+    vector< vector<Pixel> > bmp;
+    Pixel rgb;
+    int columns, rows;
+
+    image.open("machupicchu.bmp");
+    cout<<"Your image has been loaded"<<endl;
+    bmp = image.toPixelMatrix();
+    rows = bmp.size();
+    columns = bmp[0].size();
+    cout<<"Height: "<<rows<<" pixels."<<endl;
+    cout<<"Width: "<<columns<<" pixels."<<endl;
     /*Asking the user for input on what picture they want in grayscale
         -Make sure that the input is actually a picture. 
         -The program will keep asking the user for a picture as long as they do not input an image with the proper
