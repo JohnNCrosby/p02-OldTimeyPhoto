@@ -13,8 +13,17 @@ int main()
     vector< vector<Pixel> > bmp;
     Pixel rgb;
     int columns, rows;
+    bool validBmp;
+    string name;
 
-    image.open("machupicchu.bmp");
+    do
+    {
+        cout<<"Please enter a valid bmp file name."<<endl;
+        cin>>name;
+        image.open(name);
+        validBmp = image.isImage();
+    } while(validBmp == false);
+
     cout<<"Your image has been loaded"<<endl;
     bmp = image.toPixelMatrix();
     rows = bmp.size();
@@ -27,8 +36,12 @@ int main()
          requirements.
         -Change the image into a bitmap as to allow for the altering of pixels.
     */
-
-
+    
+    for(int r=0; r<rows; r++)
+    {
+        for(int c=0; c<columns; c++)
+        {
+            image
 
 
     /*The program will change the color of the image.
