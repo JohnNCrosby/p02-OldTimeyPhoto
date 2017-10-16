@@ -12,13 +12,13 @@ int main()
     Bitmap image;
     vector< vector<Pixel> > bmp;
     Pixel rgb;
-    int columns, rows;
+    int columns, rows, grey;
     bool validBmp;
     string name;
-
+    
     do
     {
-        cout<<"Please enter a valid bmp file name."<<endl;
+        cout<<"Please enter a valid bmp file name that is a 24 bit depth Windows Bmp file."<<endl;
         cin>>name;
         image.open(name);
         validBmp = image.isImage();
@@ -41,8 +41,15 @@ int main()
     {
         for(int c=0; c<columns; c++)
         {
-            image
-
+            rgb = bmp[r][c];
+            grey = ((rgb.red + rgb.green + rgb.blue) / 3);
+            rgb.red = grey;
+            rgb.green = grey;
+            rgb.blue = grey;
+            bmp[r][c] = rgb;
+        }
+    }
+    
 
     /*The program will change the color of the image.
         -Row by row, collumn by collumn it will change the color of the pixel to a grey color. 
@@ -50,7 +57,10 @@ int main()
         -This program will keep going tell the entire image is converted to a grey version.
     */
     
-
+    image.fromPixelMatrix(bmp);
+    image.save("oldtimey.bmp");
+    cout<<"Your image has been converted to greyscale and has been named oldtimey.bmp"<<endl;
+    
 
 
 
